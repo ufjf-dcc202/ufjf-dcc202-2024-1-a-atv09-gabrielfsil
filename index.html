@@ -6,7 +6,6 @@
     <title>DCC202 - Atividade 9: Gabriel Fernandes Silva</title>
   </head>
   <body>
-    <script></script>
     <main>
       <h1>DCC202 - Atividade 9: Gabriel Fernandes Silva</h1>
       <p>
@@ -14,5 +13,41 @@
         resultado no console e durante a depuração.
       </p>
     </main>
+    <script>
+        let joao = 1;
+        let maria = 2;
+        deJoaoParaMaria();
+        deMariaParaJoao();
+
+        function deJoaoParaMaria(){
+            maria = maria + joao;
+            joao = 0;
+        }
+        function deMariaParaJoao(){
+            joao = joao + maria;
+            maria = 0;
+        }
+
+        let oJoao = {
+            tipo: "maçã",
+            qtd: 1,
+        }
+
+        let oMaria = {
+            tipo: "maçã",
+            qtd: 2,
+            comeu: function(){
+                this.qtd--;
+            }  
+        }
+
+        oMaria.qtd = oMaria.qtd + oJoao.qtd;
+        oJoao.qtd = 0;
+
+        console.log("Maria tinha ",oMaria.qtd," maçãs");
+        oMaria.comeu();
+        console.log("Maria comeu uma, agora tem ",oMaria.qtd," maçãs");
+
+    </script>
   </body>
 </html>
